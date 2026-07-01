@@ -1,10 +1,9 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://study-quest-game.onrender.com/",
+  baseURL: "https://study-quest-game.onrender.com/api",
 });
 
-// Automatically attach JWT token to every request
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
 
